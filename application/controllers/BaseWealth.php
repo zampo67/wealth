@@ -1,5 +1,6 @@
 <?php
-
+use \Tools\Browser as Browser;
+use \Tools\MobileDetect as MobileDetect;
 /**
  * PC端Controller
  */
@@ -9,6 +10,7 @@ class BaseWealthController extends BaseController {
     protected $_sess_prefix = 'r';
     protected $_mobile_detect = null;
     protected $_is_web = 1;
+    Protected $_client_ip = '';
 
     public function init() {
         // 配置国际化文件目录
@@ -131,8 +133,8 @@ class BaseWealthController extends BaseController {
      */
     public function browserLog(){
         if(!$this->_isAjax()){
-            $ip = Tools::getRemoteAddr();
-            if($ip != $this->_server('SERVER_ADDR')){
+            $this->_client_ip = Tools::getRemoteAddr();
+            if($this->_client_ip != $this->_server('SERVER_ADDR')){
                 $browser = new Browser();
                 $browser_name = $browser->getBrowser();
                 $cookie_browser_name = $this->getCacheBrowserName();

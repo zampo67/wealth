@@ -1,4 +1,6 @@
 <?php
+namespace Tools;
+
 /**
  * Mobile Detect Library
  * =====================
