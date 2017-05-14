@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta name='viewport' content='width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <meta name="keywords" content="<?php echo $_head['keywords'];?>" />
+    <meta name="description" content="<?php echo $_head['description'];?>" />
+    <title><?php echo isset($_title) ? $_title : $_head['title'];?></title>
+
+    <link type="text/css" rel="stylesheet" href="/static/css/??web/bootstrap.css,wx/common/common.css?v=<?php echo $_common_version;?>" />
+    <script src='/static/js/wx/common/common.js?v=<?php echo $_common_version;?>'></script>
+
+    <?php echo $content;?>
+
+    <script src="/static/js/tongji.js?v=<?php echo $_common_version;?>"></script>
+</html>

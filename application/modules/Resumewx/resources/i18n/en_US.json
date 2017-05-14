@@ -1,0 +1,35 @@
+{
+  "label": {
+
+  },
+  "error": {
+    "controller": {
+
+    },
+    "common": {
+      "default": "Network",
+      "empty": "${label} can't be empty",
+      "empty_input": "Enter ${label}",
+      "empty_select": "Choose ${label}",
+      "min_length": "${label}不能少于${value}字符",
+      "max_length": "${label}不能多于${value}字符",
+      "min_num": "${label}不能少于${value}个",
+      "max_num": "${label}不能多于${value}个",
+      "email": "format is wrong",
+      "mobile": "format is wrong",
+      "number": "format is wrong",
+      "wechat": "format is wrong",
+      "year": "format is wrong",
+      "month": "format is wrong",
+      "in_array": "format is wrong",
+      "string": "format is wrong",
+      "array": "format is wrong"
+    }
+  },
+  "title": {
+
+  },
+  "other": {
+
+  }
+}

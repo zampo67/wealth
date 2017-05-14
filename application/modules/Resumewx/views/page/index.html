@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no">
+    <title>测试</title>
+</head>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    wx.config({
+        debug: false,
+        appId: '<?php echo $wx_config["appId"];?>',
+        timestamp: <?php echo $wx_config["timestamp"];?>,
+    nonceStr: '<?php echo $wx_config["nonceStr"];?>',
+            signature: '<?php echo $wx_config["signature"];?>',
+            jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage'
+    ]
+    });
+
+    wx.ready(function() {
+        wx.onMenuShareTimeline({
+            title: '<?php echo $wx_share["title"];?>', // 分享标题
+            link: '<?php echo $wx_share["link"];?>', // 分享链接
+            imgUrl: '<?php echo $wx_share["imgUrl"];?>', // 分享图标
+            success: function () {},
+            cancel: function () {}
+        });
+
+        wx.onMenuShareAppMessage({
+            title: '<?php echo $wx_share["title"];?>', // 分享标题
+            desc: '<?php echo $wx_share["desc"];?>', // 分享描述
+            link: '<?php echo $wx_share["link"];?>', // 分享链接
+            imgUrl: '<?php echo $wx_share["imgUrl"];?>', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {},
+            cancel: function () {}
+        });
+    });
+</script>
+</html>

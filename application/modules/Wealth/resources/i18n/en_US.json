@@ -1,0 +1,92 @@
+{
+  "label": {
+
+  },
+  "error": {
+    "controller": {
+
+    },
+    "common": {
+      "default": "Network",
+      "empty": "${label} can't be empty",
+      "empty_input": "Enter ${label}",
+      "empty_select": "Choose ${label}",
+      "min_length": "${label}不能少于${value}字符",
+      "max_length": "${label}不能多于${value}字符",
+      "min_num": "${label}不能少于${value}个",
+      "max_num": "${label}不能多于${value}个",
+      "email": "format is wrong",
+      "mobile": "format is wrong",
+      "number": "format is wrong",
+      "wechat": "format is wrong",
+      "year": "format is wrong",
+      "month": "format is wrong",
+      "in_array": "format is wrong",
+      "string": "format is wrong",
+      "array": "format is wrong"
+    }
+  },
+  "variables": {
+    "sex" :{
+      "1" : "Male",
+      "2" : "Female"
+    },
+    "degree" : {
+      "1" : "PhD",
+      "2" : "Master",
+      "3" : "Bachelor",
+      "4" : "College Diploma",
+      "5" : "Specialized Secondary Schools",
+      "6" : "High School",
+      "99" : "Others"
+    },
+    "marital_status" : {
+      "1" : "Married",
+      "2" : "Single"
+    },
+    "political_status" : {
+      "1" : "Member of the Communist Party of China (Member of CPC)",
+      "2" : "Communist Youth League Member",
+      "3" : "Citizen",
+      "4" : "Probationary Member of CPC",
+      "5" : "Member of Democratic Party",
+      "99" : "Others"
+    },
+    "skill_type" : {
+      "1" : "Beginner",
+      "2" : "Novice",
+      "3" : "Intermediate",
+      "4" : "Advanced",
+      "5" : "Expert"
+    },
+    "eduExperience_type" : {
+      "1" : "Scholarships",
+      "2" : "Competitions",
+      "5" : "Positions of Responsibility",
+      "6" : "Student Representative",
+      "7" : "Awards"
+    },
+    "work_type_resume" : {
+      "1" : "Internship",
+      "2" : "Full-time",
+      "3" : "Part-time",
+      "4" : "Social Work"
+    }
+  },
+  "title": {
+
+  },
+  "other": {
+    "template_age" : "${age}-year-old",
+    "template_height" : "${height}CM",
+    "template_weight" : "${weight}Kg",
+    "template_target_salary" : "¥ ${min}K-${max}K",
+    "template_end_time" : "Present",
+    "template_certificate_end_time" : "This certificate does not expire",
+    "template_work_project" : "Projects",
+    "template_month_format" : "M",
+    "template_classify_start_month" : "${month}",
+    "template_classify_end_month" : "to ${month}",
+    "template_classify_end_year_and_month" : "to ${year} ${month}"
+  }
+}

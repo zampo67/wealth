@@ -1,0 +1,94 @@
+{
+  "label": {
+    "wx_question_like": {
+      "question_id": "问题"
+    }
+  },
+  "error": {
+    "code": {
+      "40001": "参数不全",
+      "40002": "参数格式不对",
+      "40003": "禁止访问",
+      "40004": "资源不存在",
+      "40005": "方法不被允许",
+      "40006": "未知错误",
+      "40011": "模块不允许访问",
+      "40012": "控制器不允许访问",
+      "40013": "请求方法不允许访问",
+      "40014": "请求客户端不允许访问",
+      "40021": "今日发送已达上限",
+      "40022": "发送太频繁,请稍后尝试",
+      "40051": "需要跳转",
+      "40101": "获取ls_token失败",
+      "40102": "ls_token不存在",
+      "40121": "会话已超时",
+      "40141": "尚未完成简历引导页",
+      "41001": "数据插入失败",
+      "41002": "数据更新失败",
+      "41003": "数据删除失败",
+      "41004": "数据操作失败",
+      "50000": "字段不能为空",
+      "59000": "字段格式错误",
+      "60001": "验证码错误，请重新输入",
+      "60002": "该手机号已注册",
+      "60003": "注册失败，请重新尝试",
+      "60004": "登录失败",
+      "60005": "该手机号尚未注册",
+      "60006": "手机号或密码错误",
+      "60007": "发送验证码失败",
+      "60100": "用户尚未绑定"
+    },
+    "controller": {
+      "default": "资源错误",
+      "success_save": "保存成功",
+      "fail_save": "保存失败",
+      "format_wrong_login_username": "请输入邮箱或手机号码",
+      "format_wrong_password": "请输入格式6-16位的密码",
+      "mobile_is_register": "该手机已经被注册请更换手机",
+      "email_is_register": "该邮箱已经被注册请更换邮箱",
+      "mobile_is_not_register": "该手机尚未注册",
+      "email_is_not_register": "该邮箱尚未注册",
+      "username_or_password_wrong": "用户名或密码错误",
+      "user_has_bind_wx": "该账号已绑定其他微信,请更换账号",
+      "order_create_fail":"生成订单失败"
+    },
+    "common": {
+      "default": "网络异常",
+      "empty": "${label}不能为空",
+      "empty_input": "请输入${label}",
+      "empty_select": "请选择${label}",
+      "min_length": "${label}不能少于${value}字符",
+      "max_length": "${label}不能多于${value}字符",
+      "min_num": "${label}不能少于${value}个",
+      "max_num": "${label}不能多于${value}个",
+      "email": "请输入正确的邮箱",
+      "mobile": "请输入正确的手机号",
+      "number": "请输入数字",
+      "wechat": "请输入正确的微信号",
+      "year": "请提交正确的年份",
+      "month": "请提交正确的月份",
+      "in_array": "数据格式错误",
+      "string": "请提交字符串",
+      "array": "请提交数组"
+    }
+  },
+  "title": {
+    "product_resume": "知页简历",
+    "product_question": "知页学院购买付款",
+    "product_compilation": "知页学院购买付款"
+  },
+  "other": {
+    "price_yuan": "${price}元",
+    "people_sum": "${num}人",
+    "number_wan": "${num}万+",
+    "head_title": "知页学院",
+    "head_keywords": "知页学院，简历面试，面试，干货，职场，职场竞争力，省时省力",
+    "head_description": "知页学院 | 简历面试干货，浓缩知识，省时省力提升职场竞争力",
+    "upgrading_title": "系统升级中",
+    "upgrading_desc": "您好！为了给您带来更加便捷优质的服务，知页学院正在进行系统升级，在升级期间网站将不能正常使用，给您带来的不便，敬请谅解！",
+    "wx_share_question_list": "我发现了有用有效有料的职场秘籍",
+    "wx_share_question_item": "我发现了职场秘籍《${title}》",
+    "wx_template_msg_ques_com_sub_succ_title": "恭喜您已成功报名课程",
+    "wx_template_msg_ques_com_info_update_title": "您报名的课程有更新哟！"
+  }
+}
