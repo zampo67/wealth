@@ -1,6 +1,7 @@
 <?php
 use \Tools\Browser as Browser;
 use \Tools\MobileDetect as MobileDetect;
+use \Services\Log\Browser AS BrowserLog;
 /**
  * PC端Controller
  */
@@ -140,11 +141,8 @@ class BaseWealthController extends BaseController {
                 $cookie_browser_name = $this->getCacheBrowserName();
                 if($browser_name != $cookie_browser_name){
                     $version_name = $browser->getVersion();
-                    LogRsRecordBrowserModel::model()->MSave(array(
-                        'ip' => $ip,
-                        'name_id' => VariablesModel::model()->getVarId($browser_name,1,1),
-                        'version_id' => VariablesModel::model()->getVarId($version_name,1,2),
-                    ));
+                    $browser_log = new BrowserLog($browser_name,$version_name,$this->_client_ip);
+                    $browser_log->save();
                     $this->setCacheBrowserName($browser_name);
                 }
                 if($browser_name=='Internet Explorer' && $this->_server('REQUEST_URI')!='/index/ietips'){

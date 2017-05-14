@@ -1,7 +1,7 @@
 <?php
 
-class LogRsRecordBrowserModel extends MBaseModel {
-    protected $_table = '{{log_rs_record_browser}}';
+class LogRsRecordBrowserVersionModel extends MBaseModel {
+    protected $_table = '{{log_rs_record_browser_version}}';
 
     /**
      * 实例化Model
@@ -22,13 +22,11 @@ class LogRsRecordBrowserModel extends MBaseModel {
         );
     }
 
-    public function createTable(){
-        return $this->MExecute(SqlTemplate::getCreateTableSql($this->getTable()));
+    public function MFind($options = Array(), $status = 0, $is_del = 0){
+        return parent::MFind($options,$status, $is_del);
     }
 
     public function MSave($data, $ctime = 1, $mtime = 0){
-        $this->createTable();
-        $this->setTable(SqlTemplate::getTableName($this->getTable()));
         return parent::MSave($data, $ctime, $mtime);
     }
 }
