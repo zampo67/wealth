@@ -1,0 +1,7 @@
+.idea/
+.DS_Store
+/log/
+/public/upload/images/
+/public/upload/qrcode/
+/public/upload/temp/
+/public/static/cvwx/
