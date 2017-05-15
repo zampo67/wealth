@@ -4,6 +4,9 @@ class UserModel extends MBaseModel {
     protected $_table = '{{user}}';
     protected $_password_salts = 'wealth^%$';
 
+    public static $owner_group_id = '1';    // 最高管理者
+    public static $base_group_id = '11'; // 最高管理者添加的用户
+
     /**
      * 实例化Model
      * @param string $className
