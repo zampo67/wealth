@@ -2,7 +2,7 @@
 
 class UserModel extends MBaseModel {
     protected $_table = '{{user}}';
-    protected $_password_salts = 'zhiye^%$';
+    protected $_password_salts = 'wealth^%$';
 
     /**
      * 实例化Model
@@ -18,29 +18,27 @@ class UserModel extends MBaseModel {
      * @return array
      */
     public function rules(){
-        return array();
-    }
-
-    public function getBindByEmail($email, $field='id'){
-        return (empty($email) || !Common::isEmail($email)) ? false : $this->MFind(array(
-            'field' => $field,
-            'where' => array('email'=>trim($email)),
-        ));
-    }
-
-    public function getBindByMobile($mobile, $field='id'){
-        return (empty($mobile) || !Common::isMobile($mobile)) ? false : $this->MFind(array(
-            'field' => $field,
-            'where' => array('mobile'=>trim($mobile)),
-        ));
+        return array(
+             'mobile' => array(
+                'filter_func' => array('trim'),
+                'empty' => array('type' => 'input'),
+                'mobile' => array()
+            ),
+            'password' => array(
+                'filter_func' => array('trim'),
+                'empty' => array(),
+                'min_length' => array( 'length' => 6),
+                'max_length' => array( 'length' => 16),
+            ),
+        );
     }
 
     public function getPassword($pwd){
-        return md5(md5($pwd).$this->_password_salts);
+        return password_hash($pwd.$this->_password_salts, PASSWORD_DEFAULT);
     }
 
-    public function verifyPassword($pwd, $check){
-        return ($this->getPassword($pwd) == $check) ? true : false;
+    public function verifyPassword($pwd, $hash){
+        return password_verify($pwd.$this->_password_salts, $hash);
     }
 
     public function login($data, $user_id, $prefix=''){

@@ -28,7 +28,7 @@ class BaseWealthController extends BaseController {
             Log::request('req|uri ', $this->_server('HTTP_HOST').$this->_server('REQUEST_URI'));
             Log::request('req|body', http_build_query($this->_request()));
             if($this->_is_test == true && $this->_get('htmlTest')==1){
-                $user_id = $this->_get('uid', 148);
+                $user_id = $this->_get('uid', 1);
                 $this->_user = UserModel::model()->MGetInfoById($user_id, 'id,mobile,email,i18n_id');
             }else{
                 $this->checkLsToken();
